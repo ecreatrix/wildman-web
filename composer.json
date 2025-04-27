@@ -29,6 +29,7 @@
     "composer/installers": "^2.2",
     "vlucas/phpdotenv": "^5.5",
     "oscarotero/env": "^2.1",
+    "filp/whoops": "^2.18",
     "roots/acorn": "^5.0",
     "roots/acorn-fse-helper": "^1.0",
     "roots/bedrock-autoloader": "^1.0",
@@ -50,7 +51,11 @@
     "wpackagist-plugin/google-analytics-for-wordpress": "^9.3",
     "wpackagist-plugin/ninja-forms": "^3.9",
     "wpackagist-theme/twentytwentyfive": "^1.1",
-    "wpackagist-plugin/create-block-theme": "^2.6"
+    "wpackagist-plugin/create-block-theme": "^2.6",
+    "wpackagist-plugin/debug-bar": "^1.1",
+    "wpackagist-plugin/debug-bar-console": "^0.3.1",
+    "wpackagist-plugin/debug-bar-cron": "^0.1.3",
+    "wpackagist-plugin/gutenberg": "^20.6"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",

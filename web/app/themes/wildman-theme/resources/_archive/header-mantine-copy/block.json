@@ -1,0 +1,61 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wa/header-mantine-broken",
+	"version": "0.1.0",
+	"title": "WA Header TEST",
+	"category": "widgets",
+	"description": "Display your site's copyright date.",
+	"example": {},
+	"keywords": [ "wa"],
+	"allowedBlocks": [
+		"core/paragraph",
+		"core/heading",
+		"core/form-input",
+		"core/form-submit-button",
+		"core/form-submission-notification",
+		"core/group",
+		"core/columns"
+	],
+	"attributes": {
+		"placeholder": {
+			"type": "string",
+			"default": "All Rights Reserved"
+		},
+		"align": {
+			"type": "string"
+		},
+		"content": {
+			"type": "string",
+			"role": "content"
+		},
+		"showIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"fallbackCurrentYear": {
+			"type": "string"
+		},
+		"showStartingYear": {
+			"type": "boolean"
+		},
+		"startingYear": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"color": {
+			"background": false,
+			"text": true
+		},
+		"html": false,
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"textdomain": "wa",
+	"editorScript": "file:./index.jsx",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

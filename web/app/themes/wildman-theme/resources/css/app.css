@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Quicksand:wght@300..700&display=swap");
+
+@import "./modules/tailwind-base";
+
+
+@import "./modules/embla";
+/*@plugin "daisyui";
+@import "./modules/flowbite";
+@import "./modules/tailwind";
+@import "./mantine/index";*/
+@import "./modules/tw-elements";
+@import "./modules/layout";
+@import "./modules/gutenberg";
+@import "./modules/misc";
+
+@import "../blocks/style";
+
+@source "../views/";
+@source "../../app/";

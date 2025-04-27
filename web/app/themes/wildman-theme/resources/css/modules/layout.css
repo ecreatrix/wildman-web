@@ -1,0 +1,50 @@
+header.site-header { 
+	background: white; 
+	position: sticky; 
+	top: 0; 
+	z-index: 1000;
+
+	> div {
+		padding-top: var(--wp--preset--spacing--30);
+	    padding-bottom: var(--wp--preset--spacing--30);
+	}
+
+	.wp-block-navigation-item {
+		@apply transition-colors;
+	}
+
+	.wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container, .wp-block-navigation__submenu-container {
+		border: none;
+	}
+
+	.wp-block-navigation__submenu-container {
+		.wp-block-navigation-item:hover {
+			background: var(--wp--preset--color--season);
+			color: var(--wp--preset--color--white);
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		li:first-child { 
+			border-top: 2px solid var(--wp--preset--color--season);
+		}
+	}
+
+	.wp-block-navigation__container > li > .wp-block-navigation__submenu-container {
+		background: transparent;
+		top: 50%;
+		padding-top: calc( 75px/2 + var(--wp--preset--spacing--30) );
+
+		li {
+			background: var(--wp--preset--color--white);
+		}
+	}
+
+	.wa-block-site-logo-seasons {
+		&, svg {
+			height: 75px;
+		}
+	}
+}

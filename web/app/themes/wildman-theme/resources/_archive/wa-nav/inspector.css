@@ -1,0 +1,7 @@
+.wa-block-navigation-off-canvas-editor__header {
+	flex-wrap: wrap;
+}
+
+.wa-block-navigation__menu-inspector-controls .block-editor-list-view-leaf:not(.is-branch-selected) {
+	display: none;
+}

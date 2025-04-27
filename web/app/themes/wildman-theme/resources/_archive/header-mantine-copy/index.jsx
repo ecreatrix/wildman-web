@@ -1,0 +1,36 @@
+/**
+ * Registers a new block provided a unique name and an object defining its behavior.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
+ */
+import { registerBlockType } from '@wordpress/blocks';
+import { calendar as icon } from '../../icons/build-module';
+import { Path, SVG } from '@wordpress/primitives';
+
+console.log(icon)
+/**
+ * Internal dependencies
+ */
+import edit from './edit';
+import save from './save';
+import metadata from './block.json';
+
+const { name } = metadata;
+export { metadata, name };
+
+export const settings = {
+    icon,
+    edit,
+    save,
+};
+
+//console.log(icon)
+
+//console.log({ name, ...metadata }, settings)
+
+/**
+ * Every block starts by registering a new block type definition.
+ *
+ * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
+ */
+registerBlockType( { name, ...metadata }, settings );

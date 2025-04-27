@@ -1,0 +1,7 @@
+@import "./modules/tailwind-base";
+@import "./modules/tailwind";
+
+@import "../blocks/style";
+@import "../blocks/editor";
+
+/*@plugin "daisyui";*/
