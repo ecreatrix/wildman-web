@@ -1,9 +1,0 @@
-.wp-block-wa-accordion-slide {
-	.heading-button {
-		@apply w-full;
-	}
-
-	.content-container {
-		@apply pt-4;
-	}
-}

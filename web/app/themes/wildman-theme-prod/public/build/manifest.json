@@ -1,0 +1,63 @@
+{
+  "editor.deps.json": {
+    "file": "assets/editor.deps-DcSvO6nY.json",
+    "src": "editor.deps.json"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-yLJWAtvF.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/editor.css": {
+    "file": "assets/editor-DnhmfF0c.css",
+    "src": "resources/css/editor.css",
+    "isEntry": true
+  },
+  "resources/css/inspector.css": {
+    "file": "assets/inspector-3TNTiFoT.css",
+    "src": "resources/css/inspector.css",
+    "isEntry": true
+  },
+  "resources/css/login.css": {
+    "file": "assets/login-48zrRCE7.css",
+    "src": "resources/css/login.css",
+    "isEntry": true
+  },
+  "resources/images/favicon.png": {
+    "file": "assets/favicon-BnoCsk6v.png",
+    "src": "resources/images/favicon.png"
+  },
+  "resources/images/gate1.webp": {
+    "file": "assets/gate1-B6VPWkdk.webp",
+    "src": "resources/images/gate1.webp"
+  },
+  "resources/js/app.jsx": {
+    "file": "assets/app-Bttk3bwK.js",
+    "name": "app",
+    "src": "resources/js/app.jsx",
+    "isEntry": true
+  },
+  "resources/js/editor.jsx": {
+    "file": "assets/editor-Cln1oq5p.js",
+    "name": "editor",
+    "src": "resources/js/editor.jsx",
+    "isEntry": true,
+    "css": [
+      "assets/editor-tn0RQdqM.css"
+    ]
+  },
+  "resources/settings/index.jsx": {
+    "file": "assets/index-DLogmozh.js",
+    "name": "index",
+    "src": "resources/settings/index.jsx",
+    "isEntry": true,
+    "css": [
+      "assets/style-Bf4raFPo.css"
+    ]
+  },
+  "resources/settings/style.css": {
+    "file": "assets/style-Bf4raFPo.css",
+    "src": "resources/settings/style.css",
+    "isEntry": true
+  }
+}
