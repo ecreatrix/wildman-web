@@ -1,0 +1,77 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wa/page-title",
+	"version": "0.1.0",
+	"title": "Page Title",
+	"category": "widgets",
+	"description": "Display page's title on coloured background.",
+	"example": {},
+	"keywords": [ "wa"],
+  	"attributes": {
+  		"textColor": {
+			"type": "string"
+		},
+		"customTextColor": {
+			"type": "string"
+		},
+		"rgbTextColor": {
+			"type": "string"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "season"
+		},
+		"customBackgroundColor": {
+			"type": "string"
+		},
+		"rgbBackgroundColor": {
+			"type": "string"
+		},
+		"contentPosition": {
+			"type": "string"
+		},
+		"align": {
+      		"type": "string",
+      		"default": "full" 
+    	},
+		"verticalAlign": {
+      		"type": "string",
+      		"default": "bottom" 
+    	},
+        "style": {
+        	"type": "object",
+            "default": {
+			    "dimensions": {
+			        "minHeight": "20vh"
+			    }
+			}
+		},
+        "layout": {
+	      	"type": "object",
+	      	"default": {
+	      		"type": "constrained"
+	      	}
+	    }
+  	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true
+		},
+		"anchor": true,
+		"align": true,
+		"__experimentalLayout": true,
+	    "dimensions": {
+	      	"minHeight": true,
+	      	 "__experimentalBlockFullHeight": true
+	    },
+	    "__experimentalLayout": true
+	},
+	"innerBlocks": true,
+	"textdomain": "wa",
+	"editorScript": "file:./index.jsx",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}

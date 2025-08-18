@@ -1,10 +1,10 @@
 {
   "editor.deps.json": {
-    "file": "assets/editor.deps-DcSvO6nY.json",
+    "file": "assets/editor.deps-BgtSwbdM.json",
     "src": "editor.deps.json"
   },
   "resources/css/app.css": {
-    "file": "assets/app-yLJWAtvF.css",
+    "file": "assets/app-CqzXnzU9.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -38,7 +38,7 @@
     "isEntry": true
   },
   "resources/js/editor.jsx": {
-    "file": "assets/editor-Cln1oq5p.js",
+    "file": "assets/editor-CWFz1SBR.js",
     "name": "editor",
     "src": "resources/js/editor.jsx",
     "isEntry": true,

@@ -33,7 +33,7 @@ if (  ! class_exists( Gutenberg::class ) ) {
 
         public function addOptions()
         {
-            add_option( 'wathemes', ['site_logo_tall' => '790', 'site_logo_long' => false] );
+            add_option( 'watheme', ['site_logo_tall' => '790', 'site_logo_long' => false] );
         }
 
         public function block_styles()
@@ -85,7 +85,7 @@ if (  ! class_exists( Gutenberg::class ) ) {
                 'core/gallery',
                 [
                     'name'  => 'masonry',
-                    'label' => __( 'Masonry', 'wathemes' ),
+                    'label' => __( 'Masonry', 'watheme' ),
                 ]
             );
 
@@ -211,7 +211,7 @@ if (  ! class_exists( Gutenberg::class ) ) {
                 // Set the flag so the script doesn't run again.
                 update_option( 'all_pages_meta_script_ran', '1' );
 
-                // Optional: Log a message to the debug log for confirmation.
+                // Optional: Log a meswatheme to the debug log for confirmation.
                 error_log( 'Successfully set meta value for all pages.' );
             }
         }
@@ -254,8 +254,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_button_booking_link',
                     ],
                     'type'         => 'string',
-                    'label'        => __( 'Booking Link' ),
-                    'description'  => __( 'Booking Link' ),
+                    'label'        => __( 'Booking Link', 'watheme' ),
+                    'description'  => __( 'Booking Link', 'watheme' ),
                 ]
             );
 
@@ -267,8 +267,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_tall_winter',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Tall - Winter)' ),
-                    'description'  => __( 'Site logo (Tall - Winter).' ),
+                    'label'        => __( 'Logo (Tall - Winter)', 'watheme' ),
+                    'description'  => __( 'Site logo (Tall - Winter).', 'watheme' ),
                 ]
             );
             register_setting(
@@ -279,8 +279,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_long_winter',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Long - Winter)' ),
-                    'description'  => __( 'Site logo (Long - Winter).' ),
+                    'label'        => __( 'Logo (Long - Winter)', 'watheme' ),
+                    'description'  => __( 'Site logo (Long - Winter).', 'watheme' ),
                 ]
             );
 
@@ -292,8 +292,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_tall_spring',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Tall - Spring)' ),
-                    'description'  => __( 'Site logo (Tall - Spring).' ),
+                    'label'        => __( 'Logo (Tall - Spring)', 'watheme' ),
+                    'description'  => __( 'Site logo (Tall - Spring).', 'watheme' ),
                 ]
             );
             register_setting(
@@ -304,8 +304,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_long_spring',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Long - Spring)' ),
-                    'description'  => __( 'Site logo (Long - Spring).' ),
+                    'label'        => __( 'Logo (Long - Spring)', 'watheme' ),
+                    'description'  => __( 'Site logo (Long - Spring).', 'watheme' ),
                 ]
             );
 
@@ -317,8 +317,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_tall_summer',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Tall - Summer)' ),
-                    'description'  => __( 'Site logo (Tall - Summer).' ),
+                    'label'        => __( 'Logo (Tall - Summer)', 'watheme' ),
+                    'description'  => __( 'Site logo (Tall - Summer).', 'watheme' ),
                 ]
             );
             register_setting(
@@ -329,8 +329,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_long_summer',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Long - Summer)' ),
-                    'description'  => __( 'Site logo (Long - Summer).' ),
+                    'label'        => __( 'Logo (Long - Summer)', 'watheme' ),
+                    'description'  => __( 'Site logo (Long - Summer).', 'watheme' ),
                 ]
             );
 
@@ -342,8 +342,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_tall_fall',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Tall - Fall)' ),
-                    'description'  => __( 'Site logo (Tall - Fall).' ),
+                    'label'        => __( 'Logo (Tall - Fall)', 'watheme' ),
+                    'description'  => __( 'Site logo (Tall - Fall).', 'watheme' ),
                 ]
             );
             register_setting(
@@ -354,8 +354,8 @@ if (  ! class_exists( Gutenberg::class ) ) {
                         'name' => 'wa_site_logo_long_fall',
                     ],
                     'type'         => 'integer',
-                    'label'        => __( 'Logo (Long - Fall)' ),
-                    'description'  => __( 'Site logo (Long - Fall).' ),
+                    'label'        => __( 'Logo (Long - Fall)', 'watheme' ),
+                    'description'  => __( 'Site logo (Long - Fall).', 'watheme' ),
                 ]
             );
         }

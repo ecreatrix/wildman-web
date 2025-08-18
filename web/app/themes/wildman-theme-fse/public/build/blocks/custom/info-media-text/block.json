@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wa/info-media-text",
+	"version": "0.1.0",
+	"title": "Info",
+	"category": "widgets",
+	"description": "Modified Media and Text block in a locked template",
+	"example": {},
+	"keywords": [ "wa"],
+  	"attributes": {
+		"align": {
+      		"type": "string",
+      		"default": "full" 
+    	},
+        "layout": {
+	      	"type": "object",
+	      	"default": {
+	      		"type": "constrained"
+	      	}
+	    }
+  	},
+	"supports": {
+		"html": false,
+		"color": {
+			"text": true,
+			"background": true
+		},
+		"anchor": true,
+		"align": true,
+		"__experimentalLayout": true,
+	    "dimensions": {
+	      	"minHeight": true,
+	      	 "__experimentalBlockFullHeight": true
+	    },
+	    "__experimentalLayout": true
+	},
+	"innerBlocks": true,
+	"textdomain": "wa",
+	"editorScript": "file:./index.jsx",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}
