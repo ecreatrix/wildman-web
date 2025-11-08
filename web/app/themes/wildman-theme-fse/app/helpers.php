@@ -25,7 +25,6 @@ function enqueue_single_file( $handle, $filename, $dependencies = [], $set_type 
 
         $filetime = $details['path'] ? filemtime( $details['path'] ) : false;
 
-        //var_dump( $handle . ' ' .  ! $is_style . '<br>' );
         $enqueue_function(
             $handle,
             $details['uri'],

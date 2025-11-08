@@ -55,7 +55,7 @@ class Block_Renderer
      */
     public static function render( $attributes, $content, $block )
     {
-        var_dump( $attributes );
+        //var_dump( $attributes );
 
         /**
          * Deprecated:

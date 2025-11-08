@@ -11,6 +11,11 @@
       "palette": [
         {
           "color": "#5D6842",
+          "name": "Theme",
+          "slug": "theme"
+        },
+        {
+          "color": "#5D6842",
           "name": "Moss green",
           "slug": "base"
         },

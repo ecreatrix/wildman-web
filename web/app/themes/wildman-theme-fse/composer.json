@@ -23,9 +23,6 @@
     "php": ">=8.2",
     "roots/acorn": "^5.0"
   },
-  "require-dev": {
-    "laravel/pint": "^1.20"
-  },
   "suggest": {
     "log1x/watheme-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0)."
   },

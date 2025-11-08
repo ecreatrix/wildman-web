@@ -13,5 +13,5 @@ function wa_google_font()
 
 function wa_fontawesome()
 {
-    return 'https://kit.fontawesome.com/5ef88b4d32.js';
+    return 'https://kit.fontawesome.com/53567aa297.js';
 }

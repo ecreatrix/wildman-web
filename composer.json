@@ -47,11 +47,11 @@
     "wpackagist-plugin/wordpress-seo": "^24.6",
     "wpackagist-plugin/google-analytics-for-wordpress": "^9.3",
     "wpackagist-theme/twentytwentyfive": "^1.1",
-    "wpackagist-plugin/create-block-theme": "^2.6"
+    "wpackagist-plugin/create-block-theme": "^2.6",
+  "wpackagist-plugin/font-awesome": "^5.1"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-latest",
-    "laravel/pint": "^1.18"
+    "roave/security-advisories": "dev-latest"
   },
   "config": {
     "optimize-autoloader": true,

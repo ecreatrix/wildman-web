@@ -1,25 +1,25 @@
 {
   "editor.deps.json": {
-    "file": "assets/editor.deps-BgtSwbdM.json",
+    "file": "assets/editor.deps-CS1QeEqQ.json",
     "src": "editor.deps.json"
   },
   "resources/css/app.css": {
-    "file": "assets/app-CqzXnzU9.css",
+    "file": "assets/app-DTQx3q8_.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/css/editor.css": {
-    "file": "assets/editor-DnhmfF0c.css",
+    "file": "assets/editor-CVmm1YXr.css",
     "src": "resources/css/editor.css",
     "isEntry": true
   },
   "resources/css/inspector.css": {
-    "file": "assets/inspector-3TNTiFoT.css",
+    "file": "assets/inspector-DwXho0o3.css",
     "src": "resources/css/inspector.css",
     "isEntry": true
   },
   "resources/css/login.css": {
-    "file": "assets/login-48zrRCE7.css",
+    "file": "assets/login-CY3NbOZF.css",
     "src": "resources/css/login.css",
     "isEntry": true
   },
@@ -32,13 +32,13 @@
     "src": "resources/images/gate1.webp"
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-Bttk3bwK.js",
+    "file": "assets/app-C3fc1coa.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true
   },
   "resources/js/editor.jsx": {
-    "file": "assets/editor-CWFz1SBR.js",
+    "file": "assets/editor-DC-ZjEPi.js",
     "name": "editor",
     "src": "resources/js/editor.jsx",
     "isEntry": true,

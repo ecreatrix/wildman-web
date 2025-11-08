@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wa/carousel-slide-testimonial",
+	"title": "Testimonial Slide",
+	"parent": [ "wa/carousel-parent" ],
+	"category": "common",
+	"attributes": {
+        "anchor": {
+            "type": "string",
+            "default": ""
+        },
+		"parentId": {
+			"type": "string"
+		},
+		"author": {
+			"type": "string",
+			"default": ""
+		},
+		"group": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"color": {
+			"text": false,
+			"background": false
+		}
+	},
+	"description": "Individual slide with header that opens up content.",
+	"textdomain": "default",
+	"keywords": [ "wa"],
+	"styles": [
+		{
+			"name": "default",
+			"label": "Default",
+			"isDefault": true
+		},
+		{ "name": "rounded", "label": "Rounded" }
+	],
+	"editorStyle": "wa-block-carousel-slide-editor",
+	"style": "wa-block-carousel-slide"
+}

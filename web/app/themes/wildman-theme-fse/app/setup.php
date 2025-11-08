@@ -97,7 +97,8 @@ if (  ! class_exists( Setup::class ) ) {
         {
             //Set seson color based on actual season and update in theme.json
             $theme_json_array = $theme_json->get_data();
-            $palette          = $theme_json_array['settings']['color']['palette']['theme'];
+            //var_dump( $theme_json_array );
+            $palette = $theme_json_array['settings']['color']['palette']['theme'];
 
             $season       = \WA\Helpers\season();
             $season_color = \WA\Helpers\season_colours( $season );

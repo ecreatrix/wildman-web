@@ -211,7 +211,7 @@ if (  ! class_exists( Gutenberg::class ) ) {
                 // Set the flag so the script doesn't run again.
                 update_option( 'all_pages_meta_script_ran', '1' );
 
-                // Optional: Log a meswatheme to the debug log for confirmation.
+                // Optional: Log a message to the debug log for confirmation.
                 error_log( 'Successfully set meta value for all pages.' );
             }
         }
