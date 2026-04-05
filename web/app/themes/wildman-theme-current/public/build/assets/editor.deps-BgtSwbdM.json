@@ -1,0 +1,18 @@
+[
+  "wp-dom-ready",
+  "wp-blocks",
+  "wp-components",
+  "wp-hooks",
+  "wp-element",
+  "wp-data",
+  "wp-i18n",
+  "wp-block-editor",
+  "wp-core-data",
+  "wp-url",
+  "wp-editor",
+  "wp-blob",
+  "wp-compose",
+  "wp-notices",
+  "wp-api-fetch",
+  "wp-primitives"
+]
