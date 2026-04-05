@@ -4,6 +4,7 @@ web/app/plugins/*
 web/app/mu-plugins/*/
 web/app/themes/twentytwenty*/
 web/app/themes/*-dev
+web/app/themes/*/vendor
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
@@ -28,5 +29,3 @@ web/.htaccess
 wp-cli.local.yml
 
 *.sql
-web/app/themes/*/laravel/pint/builds/pint
-web/app/themes/wildman-theme-prod/vendor2/laravel/pint/builds/pint
