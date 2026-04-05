@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e515165145ed05b858082e87ad1a04f4",
+    "content-hash": "54a4431bf3f283c2d674273fe4a16944",
     "packages": [
         {
             "name": "brick/math",
@@ -7442,6 +7442,37 @@
                 "source": "https://plugins.svn.wordpress.org/wordpress-seo"
             },
             "time": "2026-03-31T11:45:46+00:00"
+        },
+        {
+            "name": "wp-plugin/worker",
+            "version": "4.9.32",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/worker/",
+                "reference": "tags/4.9.32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/worker.4.9.32.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0|~2.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://wp-packages.org/downloads",
+            "authors": [
+                {
+                    "name": "ManageWP"
+                }
+            ],
+            "description": "A better way to manage dozens of WordPress websites.",
+            "homepage": "https://managewp.com",
+            "support": {
+                "changelog": "https://wordpress.org/plugins/worker/#developers",
+                "issues": "https://wordpress.org/support/plugin/worker",
+                "source": "https://plugins.svn.wordpress.org/worker"
+            },
+            "time": "2026-03-23T19:23:21+00:00"
         },
         {
             "name": "wp-plugin/wp-mail-smtp",

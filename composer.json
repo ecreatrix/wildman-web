@@ -52,7 +52,8 @@
     "wp-plugin/google-analytics-for-wordpress": "^10.1",
     "wp-theme/twentytwentyfive": "^1.1",
     "wp-plugin/create-block-theme": "^2.6",
-  	"wp-plugin/font-awesome": "^5.1"
+  	"wp-plugin/font-awesome": "^5.1",
+  "wp-plugin/worker": "^4.9"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"
