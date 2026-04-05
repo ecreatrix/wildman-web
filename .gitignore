@@ -2,7 +2,8 @@
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
-web/app/themes/twentytwentyfive/
+web/app/themes/twentytwenty*/
+web/app/themes/*-dev
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
@@ -25,4 +26,6 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
-staging_wildman_staging-2025-08-25-6a52749.sql
+
+*.sql
+web/app/themes/*/laravel/pint/builds/pint

@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wa/accordion-slide",
+	"title": "Accordion Slide",
+	"parent": [ "wa/accordion-parent" ],
+	"category": "common",
+	"attributes": {
+        "anchor": {
+            "type": "string",
+            "default": ""
+        },
+		"parentId": {
+			"type": "string"
+		},
+		"startCollapsed": {
+			"type": "boolean",
+			"default": true
+		},
+		"heading": {
+			"type": "string",
+			"default": ""
+		},
+		"allowMultipleOpen": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"color": {
+			"text": false,
+			"background": false
+		}
+	},
+	"description": "Individual slide with header that opens up content.",
+	"textdomain": "default",
+	"keywords": [ "wa"],
+	"styles": [
+		{
+			"name": "default",
+			"label": "Default",
+			"isDefault": true
+		},
+		{ "name": "rounded", "label": "Rounded" }
+	],
+	"editorStyle": "wa-block-accordion-slide-editor",
+	"style": "wa-block-accordion-slide"
+}

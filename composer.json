@@ -19,9 +19,13 @@
   },
   "repositories": [
     {
+      "name": "wp-packages",
       "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+      "url": "https://repo.wp-packages.org",
+      "only": [
+        "wp-plugin/*",
+        "wp-theme/*"
+      ]
     }
   ],
   "require": {
@@ -37,18 +41,18 @@
     "roots/wordpress": "*",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.2.0",
-    "wpackagist-plugin/google-site-kit": "*",
-    "wpackagist-plugin/svg-support": "*",
-    "wpackagist-plugin/wp-mail-smtp": "^3.8",
-    "wpackagist-plugin/jetpack": "^9.2",
-    "wpackagist-plugin/force-regenerate-thumbnails": "^2.2",
-    "wpackagist-plugin/jetpack": "^14.4",
-    "wpackagist-plugin/wp-smushit": "^3.17",
-    "wpackagist-plugin/wordpress-seo": "^24.6",
-    "wpackagist-plugin/google-analytics-for-wordpress": "^9.3",
-    "wpackagist-theme/twentytwentyfive": "^1.1",
-    "wpackagist-plugin/create-block-theme": "^2.6",
-  "wpackagist-plugin/font-awesome": "^5.1"
+    "wp-plugin/google-site-kit": "^1.175",
+    "wp-plugin/svg-support": "^2.5",
+    "wp-plugin/wp-mail-smtp": "^4.7",
+    "wp-plugin/jetpack": "^15.6",
+    "wp-plugin/force-regenerate-thumbnails": "^2.2",
+    "wp-plugin/jetpack": "^15.6",
+    "wp-plugin/wp-smushit": "^3.24",
+    "wp-plugin/wordpress-seo": "^27.3",
+    "wp-plugin/google-analytics-for-wordpress": "^10.1",
+    "wp-theme/twentytwentyfive": "^1.1",
+    "wp-plugin/create-block-theme": "^2.6",
+  	"wp-plugin/font-awesome": "^5.1"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest"

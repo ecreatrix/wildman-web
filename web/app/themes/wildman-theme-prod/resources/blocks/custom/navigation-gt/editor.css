@@ -1,0 +1,591 @@
+/* Undo default editor styles. These need extra specificity. */
+.editor-styles-wrapper .wa-block-navigation {
+	/* Extra specificity is applied to do two things in classic themes: */
+	/* 1. Override the auto margin from alignment styles. This is needed as the `ul` element */
+	/*    has a `wa-block` class applied to it, even though it's not a block. */
+	/* 2. Override list indentation that targets `ul,ol` elements. */
+	ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	/* Revert any margins. */
+	/* This also makes it work with classic theme auto margins. */
+	.wa-block-navigation-item.wa-block {
+		margin: revert;
+	}
+}
+
+.wa-block-navigation {
+	.components-button {
+		display: none;
+	}	position: relative;
+
+	/* Normalize list styles. */
+	ul {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	ul,
+	ul li {
+		list-style: none;
+
+		/* Overrides generic ".entry-content li" styles on the front end. */
+		padding: 0;
+	}
+
+	/* Menu item container. */
+	.wa-block-navigation-item {
+		background-color: inherit;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		.wp-block-navigation__submenu-container:empty {
+			display: none;
+		}
+	}
+
+	/* Menu item link. */
+	/* By adding low specificity, we enable compatibility with link colors set in theme.json, */
+	/* but still allow them to be overridden by user-set colors. */
+	.wa-block-navigation-item__content {
+		display: block;
+	}
+
+	/* This rule needs extra specificity so that it inherits the correct color from its parent. */
+	/* Otherwise, a link color set by a parent group can override the value. */
+	/* This also fixes an issue where a navigation with an explicitly set color is overridden */
+	/* by link colors defined in Global Styles. */
+	.wa-block-navigation-item__content.wa-block-navigation-item__content {
+		color: inherit;
+	}
+
+	/* The following rules provide class based application of user selected text */
+	/* decoration via block supports. */
+	&.has-text-decoration-underline .wa-block-navigation-item__content {
+		text-decoration: underline;
+
+		&:focus,
+		&:active {
+			text-decoration: underline;
+		}
+	}
+
+	&.has-text-decoration-line-through .wa-block-navigation-item__content {
+		text-decoration: line-through;
+
+		&:focus,
+		&:active {
+			text-decoration: line-through;
+		}
+	}
+
+	& :where(a),
+	& :where(a:focus),
+	& :where(a:active) {
+		text-decoration: none;
+	}
+
+	/* Submenu indicator. */
+	.wa-block-navigation__submenu-icon {
+		align-self: center; /* This one affects nested submenu indicators. */
+		line-height: 0;
+		display: inline-block;
+		font-size: inherit;
+
+		/* Affect the button as well. */
+		padding: 0;
+		background-color: inherit;
+		color: currentColor;
+		border: none;
+
+		/* Scale to font size. */
+		width: 0.6em;
+		height: 0.6em;
+		margin-left: 0.25em;
+
+		svg {
+			display: inline-block;
+			stroke: currentColor;
+			width: inherit;
+			height: inherit;
+
+			/* Position the arrow to balance with the text. */
+			margin-top: 0.075em;
+		}
+	}
+
+	/* Custom properties for layout style cascade: default values. */
+	--navigation-layout-justification-setting: flex-start;
+	--navigation-layout-direction: row;
+	--navigation-layout-wrap: wrap;
+	--navigation-layout-justify: flex-start;
+	--navigation-layout-align: center;
+
+	&.is-vertical {
+		--navigation-layout-direction: column;
+		--navigation-layout-justify: initial;
+		--navigation-layout-align: flex-start;
+	}
+
+	&.no-wrap {
+		--navigation-layout-wrap: nowrap;
+	}
+
+	&.items-justified-center {
+		--navigation-layout-justification-setting: center;
+		--navigation-layout-justify: center;
+
+		&.is-vertical {
+			--navigation-layout-align: center;
+		}
+	}
+
+	&.items-justified-right {
+		--navigation-layout-justification-setting: flex-end;
+		--navigation-layout-justify: flex-end;
+
+		&.is-vertical {
+			--navigation-layout-align: flex-end;
+		}
+	}
+
+	&.items-justified-space-between {
+		--navigation-layout-justification-setting: space-between;
+		--navigation-layout-justify: space-between;
+	}
+
+	/* Allow menu items to be spaced out by space-between when only navigation links are present. */
+	.wa-block-navigation__container:only-child,
+	.wp-block-page-list:only-child {
+		flex-grow: 1;
+	}
+
+	.wa-block-navigation__container {
+		display: flex;
+		flex-wrap: var(--navigation-layout-wrap, wrap);
+		flex-direction: var(--navigation-layout-direction, initial);
+		justify-content: var(--navigation-layout-justify, initial);
+		align-items: var(--navigation-layout-align, initial);
+	}
+
+	.wa-block-navigation__responsive-container, .wa-block-navigation__responsive-close, .wp-block-navigation__submenu-container, .wa-block-navigation__responsive-dialog, .wa-block-navigation__container, .wa-block-navigation__responsive-container-content {
+		gap: inherit;
+	}
+
+	.wp-block-navigation__submenu-container {
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.wp-block-navigation-submenu {
+		align-items: center;
+		display: flex;
+	}
+
+	.block-editor-block-list__block {
+		pointer-events: auto !important;
+	}
+}
+
+/* The following rule affects the positioning of the dropdown arrow indicator. On the frontend, this element is inline, which makes it look correct. In the editor, the label is block, which causes the dropdown indicator to wrap onto a new line. Therefore we explicitly set it to inline even in the block editor. */
+.wa-block-navigation-item__label {
+	display: inline;
+}
+
+
+/**
+ * Submenus.
+ */
+
+/* Low specificity default to ensure background color applies to submenus. */
+.wa-block-navigation__container,
+.wa-block-navigation-item {
+	background-color: inherit;
+}
+
+/* Only show the flyout on hover if the parent menu item is selected. */
+.wa-block-navigation:not(.is-selected):not(.has-child-selected) .has-child:hover {
+	> .wp-block-navigation__submenu-container {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+/* Styles for submenu flyout. */
+.has-child {
+	&.is-selected,
+	&.has-child-selected {
+		> .wp-block-navigation__submenu-container {
+			display: flex;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+/* Show a submenu when generally dragging (is-dragging-components-draggable) if that */
+/* submenu has children (has-child) and is being dragged within (is-dragging-within). */
+.is-dragging-components-draggable .has-child.is-dragging-within {
+	> .wp-block-navigation__submenu-container {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+/* IE fix for submenu visibility on parent focus. */
+.is-editing > .wa-block-navigation__container {
+	visibility: visible;
+	opacity: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.is-dragging-components-draggable .wa-block-navigation-link > .wa-block-navigation__container {
+	/* Set opacity to 1 to still be able to show the draggable chip. */
+	opacity: 1;
+	visibility: hidden;
+
+	/* Show the chip but hide the submenu list. */
+	.block-editor-block-draggable-chip-wrapper {
+		visibility: visible;
+	}
+}
+
+/* Show even when a child is selected. This is an edgecase just for navigation submenus. */
+.is-editing > .wp-block-navigation__submenu-container > .block-list-appender {
+	display: block;
+	position: static;
+	width: 100%;
+
+	/* Colors need to work in both dark themes, and dark dropdown colors. */
+	/* This customization would be nice to retire in a refactor of the canvas appender button. */
+	.block-editor-button-block-appender {
+		color: $white;
+		background: $gray-900;
+		padding: 0;
+		width: $button-size-small;
+		margin-right: 0;
+		margin-left: auto;
+	}
+}
+
+/* Hide when hovering. */
+.wp-block-navigation__submenu-container .block-list-appender {
+	display: none;
+}
+
+/**
+ * Colors Selector component
+ */
+
+$colors-selector-size: 22px;
+
+.block-library-colors-selector {
+	width: auto;
+
+	/* Toolbar colors-selector button. */
+	.block-library-colors-selector__toggle {
+		display: block;
+		margin: 0 auto;
+		padding: 3px;
+		width: auto;
+	}
+
+	/* Button container. */
+	.block-library-colors-selector__icon-container {
+		height: 30px;
+		position: relative;
+		margin: 0 auto;
+		padding: 3px;
+		display: flex;
+		align-items: center;
+		border-radius: 4px;
+	}
+
+	.block-library-colors-selector__state-selection {
+		margin-left: auto;
+		margin-right: auto;
+
+		/* colors-selector - selection status. */
+		border-radius: $colors-selector-size * 0.5;
+		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+
+		width: $colors-selector-size;
+		min-width: $colors-selector-size;
+		height: $colors-selector-size;
+		min-height: $colors-selector-size;
+		line-height: ($colors-selector-size - 2);
+		padding: 2px;
+
+		> svg {
+			/* Override `min-width: $button-size-small` on toolbar-group/style.scss */
+			min-width: auto !important;
+		}
+
+		/* Styling icon color. */
+		&.has-text-color {
+
+			> svg,
+			> svg path {
+				color: inherit;
+			}
+		}
+	}
+}
+
+/* Colors Selector Popover. */
+$color-control-label-height: 20px;
+
+.block-library-colors-selector__popover {
+	.color-palette-controller-container {
+		padding: 16px;
+	}
+
+	.components-base-control__label {
+		height: $color-control-label-height;
+		line-height: $color-control-label-height;
+	}
+
+	.component-color-indicator {
+		float: right;
+		margin-top: 2px;
+	}
+
+	.components-panel__body-title {
+		display: none;
+	}
+}
+
+/* Override inner padding on default appender. This should be a temporary fix, to be replaced by improvements to */
+/* the sibling inserter. Or by the dropdown appender that is used in Group, instead of the "Button block appender". See https://github.com/WordPress/gutenberg/issues/37572. */
+.wa-block-navigation .wa-block + .block-list-appender .block-editor-button-block-appender {
+	background-color: $gray-900;
+	color: $white;
+	height: $button-size-small;
+
+	/* This needs specificity to override an inherited padding. */
+	/* That source padding in turn has high specificity to protect */
+	/* from theme CSS bleed. */
+	&.block-editor-button-block-appender.block-editor-button-block-appender {
+		padding: 0;
+	}
+}
+
+.wa-block-navigation .wa-block .wa-block .block-editor-button-block-appender {
+	background-color: transparent;
+	color: $gray-900;
+}
+
+
+/**
+ * Setup state
+ */
+
+/* Loading state. */
+@keyframes loadingpulse {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Unstyle some inherited placeholder component styles. */
+.components-placeholder.wa-block-navigation-placeholder {
+	outline: none;
+	padding: 0;
+	box-shadow: none;
+	background: none;
+	min-height: 0;
+
+	/* Needed for the preview menu items to match actual menu items. */
+	.components-placeholder__fieldset {
+		font-size: inherit;
+	}
+
+	.components-placeholder__fieldset .components-button {
+		margin-bottom: 0;
+	}
+
+	/* For the placeholder indicators to colorize correctly, colors need to be inherited unless selected. */
+	color: inherit;
+
+	.wa-block-navigation.is-selected & {
+		color: $gray-900;
+	}
+}
+
+/* Unselected state. */
+.wa-block-navigation-placeholder__preview {
+	display: flex;
+	align-items: center;
+	min-width: $grid-unit-10 * 12;
+	font-size: $default-font-size;
+	font-family: $default-font;
+
+	.wa-block-navigation.is-selected & {
+		display: none;
+	}
+
+	/* Draw the dashed outline. */
+	/* By setting the dashed border to currentColor, we ensure it's visible */
+	/* against any background color. */
+	color: currentColor;
+	background: transparent;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+		border: $border-width dashed currentColor;
+
+		/* Inherit border radius from style variations. */
+		border-radius: inherit;
+	}
+
+	> svg {
+		fill: currentColor;
+	}
+}
+
+/* Prevent layout shift for vertical variant. */
+.wa-block-navigation.is-vertical .is-small,
+.wa-block-navigation.is-vertical .is-medium {
+	.components-placeholder__fieldset {
+		/* The size of two buttons, with top and bottom padding, and gap. */
+		min-height: ($button-size * 2) + $grid-unit-15 + ($grid-unit-15 * 0.5);
+	}
+}
+
+.wa-block-navigation.is-vertical .is-large {
+	.components-placeholder__fieldset {
+		/* The size of three buttons, with top and bottom padding, and gap. */
+		min-height: ($button-size * 3) + $grid-unit-15 + $grid-unit-15;
+	}
+}
+
+/* Selected state. */
+.wa-block-navigation-placeholder__preview,
+.wa-block-navigation-placeholder__controls {
+	padding: ($grid-unit-15 * 0.5) $grid-unit-10;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.wa-block-navigation-placeholder__controls {
+	border-radius: $radius-small;
+	background-color: $white;
+	box-shadow: inset 0 0 0 $border-width $gray-900;
+	display: none;
+	position: relative;
+	z-index: 1;
+
+	/* Show when selected. */
+	.wa-block-navigation.is-selected & {
+		display: flex;
+	}
+
+	/* If an ancestor has a text-decoration property applied, it is inherited regardless of */
+	/* the specificity of a child element. Only pulling the child out of the flow fixes it. */
+	/* See also https://www.w3.org/TR/CSS21/text.html#propdef-text-decoration. */
+	float: left;
+	width: 100%;
+
+	/* Hide the navigation indicator when in small contexts. */
+	.is-small &,
+	.is-medium & {
+
+		.wa-block-navigation-placeholder__actions__indicator,
+		.wa-block-navigation-placeholder__actions__indicator + hr {
+			display: none;
+		}
+	}
+
+	/* Vertical orientation or small context. */
+	.is-small &,
+	.wa-block-navigation.is-vertical & {
+		.wa-block-navigation-placeholder__actions {
+			flex-direction: column;
+			align-items: flex-start;
+
+			hr {
+				display: none;
+			}
+		}
+	}
+
+	.wa-block-navigation-placeholder__icon {
+		margin-right: $grid-unit-15;
+		height: $button-size; /* Prevents jumpiness. */
+	}
+}
+
+/* Block title */
+.wa-block-navigation-placeholder__actions__indicator {
+	display: flex;
+	padding: 0 ($grid-unit-15 * 0.5) 0 0;
+	align-items: center;
+	justify-content: flex-start;
+	line-height: 0;
+	height: $button-size;
+
+	/* Line up with the icon in the toolbar. */
+	margin-left: $grid-unit-05;
+
+	svg {
+		margin-right: $grid-unit-05;
+		fill: currentColor;
+	}
+}
+
+/* Keep as row for medium. */
+.wa-block-navigation .components-placeholder.is-medium .components-placeholder__fieldset {
+	flex-direction: row !important;
+}
+
+.wa-block-navigation-placeholder__actions {
+	display: flex;
+	font-size: $default-font-size;
+	font-family: $default-font;
+	gap: $grid-unit-15 * 0.5;
+	align-items: center;
+
+	/* Margins. */
+	.components-dropdown,
+	> .components-button {
+		margin-right: 0;
+	}
+
+	/* Separator. */
+	height: 100%; /* This allows the separator to scale vertically. */
+
+	/* Separator. */
+	&.wa-block-navigation-placeholder__actions hr {
+		border: 0;
+		min-height: $border-width;
+		min-width: $border-width;
+		background-color: $gray-900;
+		margin: auto 0;
+		height: 100%;
+		max-height: $grid-unit-20;
+	}
+}

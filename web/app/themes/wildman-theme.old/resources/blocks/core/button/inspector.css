@@ -1,0 +1,32 @@
+.block-editor-block-inspector .booking-link {
+	.block-editor-link-control, .components-button.has-icon.is-next-40px-default-size, .block-editor-url-input, .components-menu-item__item {
+		min-width: unset;
+	}
+
+	.block-editor-link-control__search-item.is-current, .block-editor-link-control__search-results {
+		padding: 0;
+		width: 100%;
+	}
+
+	.components-button.has-icon.has-text, .block-editor-link-control__tools {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.Xcomponents-base-control:where(:not(:last-child)), .Xcomponents-radio-control:where(:not(:last-child)) {
+		margin-bottom: 0;
+	}
+
+	.Xblock-editor-link-control__search-item-top {
+		display: unset;
+	}
+
+	.block-editor-url-input {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.block-editor-link-control__search-results {
+
+	}
+}

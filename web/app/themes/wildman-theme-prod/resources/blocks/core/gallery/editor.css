@@ -1,0 +1,15 @@
+.wp-block-gallery.is-style-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust min width for editor */
+    grid-gap: 5px; /* Adjust gap for editor */
+}
+
+.wp-block-gallery.is-style-masonry .blocks-gallery-item {
+    margin: 0;
+}
+
+.wp-block-gallery.is-style-masonry img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

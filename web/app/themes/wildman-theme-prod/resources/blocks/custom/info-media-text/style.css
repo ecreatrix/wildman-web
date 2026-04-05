@@ -1,0 +1,24 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-wa-info-media-text {
+	.wp-block-media-text__content {
+		@apply py-15;
+
+		.category {
+			@apply m-0 p-0;
+		}
+
+		.title {
+			@apply mt-8 mb-16 p-0;
+		}
+
+		.wp-block-buttons {
+			@apply mt-16;
+		}
+	}
+}
